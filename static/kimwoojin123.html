@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1 : kimwoojin123</title>
+  <style>
+    *{margin : 0; padding:0; box-sizing: border-box;}
+
+    #root {
+      width:100vw;
+      height:100vh;
+      display :flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #root p {
+      font-size: 48px;
+    }
+    #root > p:first-child{
+      color : red
+    }
+    #root > p:nth-child(2){
+      color : blue
+    }
+    #root > p:last-child{
+      color : green
+    }
+  </style>
   </head>
   <body>
-    <h1>나는 kimwoojin123 아이디를 사용하고 있습니다!</h1>
+    <div id="root">
+      <p>김</p>
+      <p>우</p>
+      <p>진</p>
+    </div>
+
+  <scirpt></scirpt>
   </body>
   </html>
   

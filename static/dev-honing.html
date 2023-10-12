@@ -12,30 +12,67 @@
       #root {
         width: 100vw;
         height: 100vh;
-        background-color: rgb(254, 244, 232);
+        background-color: whitesmoke;
+      }
+      code {
+        background-color: #c4bfbf;
+        color: rgb(202, 60, 60);
+        border-radius: 3px;
+        font-family: courier, monospace;
+        padding: 0 3px;
+      }
+
+      #root > h1 {
+        text-align: center;
+        font-style: oblique ;
+        color:brown;
+      }
+      h3 {
+        margin-left: 10px;
+      }
+      p {
+        margin-left: 10px;
       }
       #root > div {
-        width: 35vw;
-        border:1px solid #000;
+        width: 60vw;
+        border:2px dotted rgb(0, 0, 0);
       }
+      #root > ol {
+        width: 100vw;
+        border: 1px solid slateblue;
+        text-align: left;
+      }
+      indent{
+        margin-left: 20px;
+      }
+
     </style>
   </head>
   <body>
     <div id="root">
-    <h1>나는 dev-honing 아이디를 사용하고 있습니다!</h1>
-    
-    <h3>브랜치 연습하기</h3>
-    <ol>
-      <li>main 브랜치로 이동하기 - `git checkout main`</li>
-      <li>파일 당겨오기 - `git pull`</li>
-      <li>새로운 브랜치 생성하기 - `git branch [브랜치명]`</li>
-      <li>생성한 브랜치로 이동하기 - `git checkout [브랜치명]`</li>
-      <li>개인 아이디로 동적 생성된 html 파일을 편집하기(나는 dev-honing.html)</li>
-      <li>편집을 완료하면 개인 브랜치로 커밋 푸시하기</li>
-      <li>각자의 작업이 끝나면 강사님께서 main 브랜치에 병합하실 예정 - `git checkout main`으로 이동하신 뒤, `git merge [브랜치명]`으로 작업하실 것 같다.</li>
-    </ol>
+    <h1>학습한 브랜치 내용 정리</h1>
+    <br>
+    <br>
+    <br>
+    <div>
+      <h3>브랜치 연습하기</h3>
+      <br>
+      <p>main 브랜치로 이동하기:  <code>git checkout main</code></p>
+      <p>파일 당겨오기: <code>git pull</code></p>
+      <p>새로운 브랜치 생성하기: <code>git branch [브랜치명] </code></p>
+      <p>생성한 브랜치로 이동하기: <code>git checkout [브랜치명]</code></p>
+      <p>생성된 html 파일을 편집하기(나: dev-honing.html)</p>
+      <p>편집을 완료하면 개인 브랜치로 커밋 푸시하기</p>
+      <p>각자의 작업이 끝나면 강사님께서 main 브랜치에 병합: <br>
+        <indent><code>git checkout main</code>으로 이동하고,<br></indent>
+        <indent><code>git merge [브랜치명]</code>으로 작업하실 것 같다.</indent>
+    </div>
+    <br>
+    <br>
       <div>
-        <p>원래는 신입 개발자에게 편집권한을 주지 않지만, 지금은 실수해보라고 풀려 있긴 함ㅋㅋ</p>
+        <h3>주의사항</h3>
+        <br>
+        <p>원래는 신입 개발자에게 편집권한을 주지 않지만, 지금은 실수해보라고 풀어놓긴 함</p>
         <p>main 브랜치는 건드리지 않도록 조심하기!</p>
       </div>
     </div>

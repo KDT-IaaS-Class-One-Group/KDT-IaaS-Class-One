@@ -19,6 +19,12 @@
   <script>
     const root = document.getElementById('root');
     const h1Tag = document.getElementsByTagName('h1');
+    
+    const arr = ["red","orange","yellow","green","blue","navy","violey"];
+
+    root.addEventListener('mousemove',(e)=>{
+      h1Tag[0].style.color = arr[e.screenY*e.screenX/10%7]
+    })
   </script>
     </html>
   

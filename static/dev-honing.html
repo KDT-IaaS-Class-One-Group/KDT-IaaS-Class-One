@@ -40,6 +40,11 @@
         margin-left: 20px;
         font-size: small;
       }
+      li{
+        margin-left: 20px;
+        list-style: none;
+        font-size: larger;
+      }
       #root > div {
         width: 60vw;
         border:2px dotted rgb(0, 0, 0);
@@ -95,14 +100,18 @@
       <p>1. 작업 브랜치로 전환: <code>git checkout [작업 브랜치]</code></p>
       <p>2. [브랜치명]을 [작업 브랜치]에 병합: <code>git merge [브랜치명]</code></p>
       <h4>브랜치 병합 방법</h4>
-      <h5>1. Fast-Forward merge 방식</h5>
-        <detail><strong>base가 같을 때에 사용</strong>하는 브랜치 병합 방법<br>
-          <detail>상대적으로 뒤에 있는 브랜치가 앞에 있는 브랜치로 빠르게 이동해 병합하는 원리</detail>
-          <detail>따라서 새로운 커밋이 생기지 않는다</detail>
-      <h5>2. 3-Way merge 방식</h5>
-      <detail><strong>base가 다를 때에 사용</strong>하는 브랜치 병합 방법<br></detail>
-      <detail>base와 각 2개의 참조 커밋을 참고해서 병합함(총 3개를 참고)</detail>
-      <detail>새로운 커밋을 생성하고, 그 커밋을 <strong>'머지 커밋'</strong>이라고 한다</detail>
+      <p>
+        [1] Fast-Forward merge 방식<br>
+          <detail><strong>base가 같을 때에 사용</strong>하는 브랜치 병합 방법<br>
+            <detail>상대적으로 뒤에 있는 브랜치가 앞에 있는 브랜치로 빠르게 이동해 병합하는 원리</detail>
+            <detail>따라서 새로운 커밋이 생기지 않는다</detail>
+      </p>
+      <p>
+        [2] 3-Way merge 방식<br>
+        <detail><strong>base가 다를 때에 사용</strong>하는 브랜치 병합 방법<br></detail>
+        <detail>base와 각 2개의 참조 커밋을 참고해서 병합함(총 3개를 참고)</detail>
+        <detail>새로운 커밋을 생성하고, 그 커밋을 <strong>'머지 커밋'</strong>이라고 한다</detail>
+      </p>
 
     </div>
 
@@ -111,7 +120,6 @@
     <br>
     <h2>주의사항</h2>
       <div>
-        <br>
         <p>원래는 신입 개발자에게 편집권한을 주지 않지만, 지금은 실수해보라고 풀어놓긴 함</p>
         <p>main 브랜치는 건드리지 않도록 조심하기!</p>
       </div>

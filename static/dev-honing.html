@@ -30,8 +30,15 @@
       h3 {
         margin-left: 10px;
       }
+      h4 {
+        margin-left: 15px;
+      }
+      h5{
+        margin-left: 20px;
+      }
       p {
-        margin-left: 10px;
+        margin-left: 20px;
+        font-size: small;
       }
       #root > div {
         width: 60vw;
@@ -45,17 +52,21 @@
       indent{
         margin-left: 20px;
       }
+      detail{
+        margin-left: 20px;
+        font-size: smaller;
+      }
 
     </style>
   </head>
   <body>
     <div id="root">
-    <h1>학습한 브랜치 내용 정리</h1>
+    <h1>브랜치 내용 정리</h1>
     <br>
     <br>
     <br>
+    <h2>브랜치 실습</h2>
     <div>
-      <h3>브랜치 연습하기</h3>
       <br>
       <p>main 브랜치로 이동하기:  <code>git checkout main</code></p>
       <p>파일 당겨오기: <code>git pull</code></p>
@@ -69,8 +80,37 @@
     </div>
     <br>
     <br>
+    <h2>파이썬 코드로 배우는 Git & GitHub</h2>
+    <div>
+      <h3>브랜치 기본작업(생성과 전환)</h3><br>
+      <p>브랜치 생성: <code>git branch [브랜치명]</code></p>
+      <p>브랜치 목록 확인: <code>git branch</code></p>
+      <p>브랜치 이름변경: <code>git branch -m(--move) [기존 브랜치명] [변경할 브랜치명]</code></p>
+      <p>브랜치 삭제: <code>git branch -d [브랜치명]</code></p>
+      <p>브랜치 전환: <code>git checkout [브랜치명]</code></p>
+      <br>
+    <div>
+      <h3>브랜치 병합</h3><br>
+      <h4>브랜치 병합 순서</h4>
+      <p>1. 작업 브랜치로 전환: <code>git checkout [작업 브랜치]</code></p>
+      <p>2. [브랜치명]을 [작업 브랜치]에 병합: <code>git merge [브랜치명]</code></p>
+      <h4>브랜치 병합 방법</h4>
+      <h5>1. Fast-Forward merge 방식</h5>
+        <detail><strong>base가 같을 때에 사용</strong>하는 브랜치 병합 방법<br>
+          <detail>상대적으로 뒤에 있는 브랜치가 앞에 있는 브랜치로 빠르게 이동해 병합하는 원리</detail>
+          <detail>따라서 새로운 커밋이 생기지 않는다</detail>
+      <h5>2. 3-Way merge 방식</h5>
+      <detail><strong>base가 다를 때에 사용</strong>하는 브랜치 병합 방법<br></detail>
+      <detail>base와 각 2개의 참조 커밋을 참고해서 병합함(총 3개를 참고)</detail>
+      <detail>새로운 커밋을 생성하고, 그 커밋을 <strong>'머지 커밋'</strong>이라고 한다</detail>
+
+    </div>
+
+    </div>
+    <br>
+    <br>
+    <h2>주의사항</h2>
       <div>
-        <h3>주의사항</h3>
         <br>
         <p>원래는 신입 개발자에게 편집권한을 주지 않지만, 지금은 실수해보라고 풀어놓긴 함</p>
         <p>main 브랜치는 건드리지 않도록 조심하기!</p>

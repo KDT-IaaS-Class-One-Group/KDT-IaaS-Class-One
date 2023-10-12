@@ -7,3 +7,5 @@ http.createServer(function(request, response) {
   response.end("hello");
   
 }).listen(8080); // 포트설정
+
+console.log("안녕하세요!!!")

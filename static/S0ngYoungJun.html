@@ -8,11 +8,12 @@
      #canvas{
       background-color: bisque;
       width:100vw;
-      height:90vh;
+      height:95vh;
      }
      .title{
       display: flex;
-      
+      justify-content: center;
+      align-items: center;
      }
     </style>
   </head>
@@ -24,7 +25,12 @@
     <script>
       let canvas = document.getElementById("canvas");
       let ctx = canvas.getContext("2d");
- 
+      let x = canvas.width / 2;
+      let y = canvas.height / 2;
+      let rectWidth = 3+"vw";
+      let rectHeight = 3+"vw";
+      let rectX = (canvas.width - rectWidth) / 2;
+      let rectY = canvas.height
     </script>    
   </body>
   </html>

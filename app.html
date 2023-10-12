@@ -11,12 +11,12 @@
   <div id="root"></div>
   <script>
     let root = document.getElementById('root');
-    function makeTag(fatherTag, tag ){
+    function makeTag(fatherTag, tag, givId){
       let cre = document.createElement(`${tag}`);
       fatherTag.appendChild(cre);
+      cre.id = `${givId}`
     }
-    // 수정해보기
-    makeTag(root, 'div');
+    makeTag(root, 'div', 'div0');
     
   </script>
 </body>

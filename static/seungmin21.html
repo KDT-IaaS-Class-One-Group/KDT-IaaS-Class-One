@@ -8,8 +8,18 @@
 </head>
 <body>
   <div id="root">
-    <p>공욱재는 미남이다.</p>
+    <h1 id="trigger">공욱재는 미남이다.</h1>
   </div>
-  <script></script>
+  <script>
+    const root = document.getElementById('root');
+    console.log(root);
+
+    const H1 = document.getElementById('trigger');
+    console.dir(H1);
+
+    H1.addEventListener('click', () => {
+      H1.style.display = "none";
+    })
+  </script>
 </body>
 </html>

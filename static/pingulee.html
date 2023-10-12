@@ -12,8 +12,13 @@
       }
       #root {
         display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
         height: 100vh;
+      }
+      #root > button {
+        
       }
     </style>
   </head>
@@ -23,7 +28,11 @@
       <button>hello</button>
     </div>
     <script>
-      helloButton = document.querySelector('#root>button');
+      let helloButton = document.querySelector('#root>button');
+
+      helloButton.addEventListener('click', () => {
+        alert('hello');
+      });
     </script>
   </body>
   </html>

@@ -1,9 +1,21 @@
-const http = require("http");
-http.createServer(function(request, response) {
-  let writeHaedObject = {
-    'Content-Type': 'text/html'
+const http = require('http');
+const fs = require('fs');
+
+http.createServer(function(req, res){
+  console.log(res.method)
+  console.log(res.url)
+
+  let writeHeadObject = {
+    'Content-Type' : 'text-html'
   }
-  response.writeHead(200, writeHaedObject);
-  response.end("hello");
-  
-}).listen(8080); // 포트설정
+
+  res.writeHead(200, writeHeadObject)
+
+  fs.readFile("./app.html", function(err, data){
+    if(err){
+      console.error("파일을 읽지 못했습니다.")
+    } else {
+      res.end(data)
+    }
+  })
+}).listen(8080);

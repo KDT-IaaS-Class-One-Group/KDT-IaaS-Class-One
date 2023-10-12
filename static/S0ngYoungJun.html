@@ -7,8 +7,8 @@
     <style>
      #canvas{
       background-color: bisque;
-      width:100vw;
-      height:90vh;
+      width:90vw;
+      height:100vh;
      }
      .title{
       display: flex;
@@ -27,13 +27,15 @@
       let ctx = canvas.getContext("2d");
       let x = canvas.width / 2;
       let y = canvas.height / 2;
-      let rectWidth = 50;
-      let rectHeight = 50;
+      let rectWidth = 20;
+      let rectHeight = 20;
       let rectX = (canvas.width - rectWidth) / 2;
-      let rectY = canvas.height 
+      let rectY = canvas.height - 20
       console.dir(canvas)
       let rightPressed = false;
       let leftPressed = false;
+      let upPressed = false;
+      let downPressed = false;
      
       document.addEventListener("keydown", keyDownHandler, false);
       document.addEventListener("keyup", keyUpHandler, false);
@@ -46,7 +48,68 @@
 	    leftPressed = true;
       }
       }
- 
+      function keyUpHandler(e) {
+	    if(e.key == 37 || e.key == "ArrowRight") {
+	    rightPressed = false;
+      }
+      else if(e.key == 39 || e.key == "ArrowLeft") {
+	    leftPressed = false;
+      }
+      else if(e.key == 38 || e.key == "ArrowUp") {
+	    upPressed = false;
+        }
+      else if(e.key == 40 || e.key == "ArrowDown") {
+	    downPressed = false;
+      } 
+      }
+      function drawRect() {
+	    ctx.beginPath();
+      ctx.rect(rectX, rectY, rectWidth, rectHeight); 
+      ctx.strokeStyle = "black";
+      ctx.stroke(); 
+      ctx.closePath();
+      }
+
+
+function draw() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	
+	drawRect();
+  
+	if(rightPressed && rectX < canvas.width - rectWidth) {
+	  rectX += 5;
+  }
+  else if(leftPressed && rectX > 0) {
+	  rectX -= 5;
+  }
+  else if(downPressed && rectY < canvas.height - rectHeight) {
+	  rectY += 5;
+  }
+  else if(upPressed && rectY > 0) {
+	  rectY -= 5;
+  }
+}
+setInterval(draw, 50);
+
+
+let interval = setInterval(function(){
+  const newDiv = document.createElement('div')
+      newDiv.style.width = "3vw"
+      newDiv.style.height = "3vw"
+      newDiv.style.backgroundColor = "red"
+      newDiv.style.borderRadius = "30px"
+      newDiv.style.position="absolute"
+      let xx = Math.floor(Math.random()* 30) 
+      let yy = Math.floor(Math.random()* 20) 
+      let xString = xx.toString()
+      let yString = yy.toString()
+      newDiv.style.left = xString+"px"
+      newDiv.style.top = yString+"px"
+      canvas.appendChild(newDiv)
+
+
+}
+    ,1000)
     </script>    
   </body>
   </html>

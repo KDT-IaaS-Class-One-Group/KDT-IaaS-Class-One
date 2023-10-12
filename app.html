@@ -12,9 +12,12 @@
   <script>
     let root = document.getElementById('root');
     function makeTag(fatherTag, tag ){
-      let ft = document.createElement(`${tag}`);
-      ft.appendChild();
+      let cre = document.createElement(`${tag}`);
+      fatherTag.appendChild(cre);
     }
+    
+    makeTag(root, 'div');
+    
   </script>
 </body>
 </html>
